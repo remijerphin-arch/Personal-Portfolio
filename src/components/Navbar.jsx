@@ -38,7 +38,7 @@ export default function Navbar() {
           <a href="#home" className="flex items-center space-x-2 text-white group">
             <Cpu className="w-6 h-6 text-primary transition-transform group-hover:rotate-90 duration-500" />
             <span className="font-outfit font-black tracking-widest text-lg group-hover:text-glow-blue transition-all">
-              JERPHIN<span className="text-secondary font-bold">.AI</span>
+              JERPHIN <span className="text-secondary font-bold">PORTFOLIO</span>
             </span>
           </a>
 
