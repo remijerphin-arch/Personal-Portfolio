@@ -84,7 +84,7 @@ export default function About() {
               <div>
                 <p className="font-semibold text-white">High School &amp; Secondary Education</p>
                 <p className="text-gray-400 text-xs">St. Joseph's School, Tamil Nadu</p>
-                <p className="text-gray-400 text-xs">Class 12 (68%) • Class 10 (76%)</p>
+                <p className="text-gray-400 text-xs">Class 12 &amp; Class 10 Graduation</p>
               </div>
             </div>
             <div className="text-xs text-gray-500 font-code">&gt; status: 3rd sem complete / active researcher</div>

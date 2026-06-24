@@ -41,7 +41,7 @@ export default function Timeline() {
       year: '2024',
       title: 'Higher Secondary Education (Class 12)',
       location: "St. Joseph's School, TN",
-      desc: 'Completed CBSE Higher Secondary Certificate focusing on Mathematics and Computer Science (Score: 68%).',
+      desc: 'Completed CBSE Higher Secondary Certificate focusing on Mathematics and Computer Science.',
       icon: <School className="w-5 h-5 text-gray-400" />,
       type: 'school'
     },
@@ -49,7 +49,7 @@ export default function Timeline() {
       year: '2022',
       title: 'Secondary Education (Class 10)',
       location: "St. Joseph's School, TN",
-      desc: 'Graduated CBSE High School Certificate with a grade of 76%.',
+      desc: 'Graduated CBSE High School Certificate.',
       icon: <School className="w-5 h-5 text-gray-400" />,
       type: 'school'
     }
