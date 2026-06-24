@@ -56,7 +56,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 px-6 relative bg-[#0A0A0A] bg-cyber-grid">
+    <section id="skills" className="py-24 px-6 relative bg-background bg-cyber-grid">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Title */}
         <div className="text-center space-y-4">

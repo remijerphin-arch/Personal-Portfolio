@@ -41,7 +41,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative text-gray-100 min-h-screen bg-[#0A0A0A]"
+          className="relative text-gray-100 min-h-screen bg-background"
         >
           {/* Futuristic pointer details & particle systems */}
           <MouseFollower />
@@ -63,7 +63,7 @@ export default function App() {
           </main>
 
           {/* Futuristic Footer */}
-          <footer className="py-12 border-t border-white/5 bg-[#08080A] text-center text-xs text-gray-500 font-code relative z-10">
+          <footer className="py-12 border-t border-white/5 bg-background/90 text-center text-xs text-gray-500 font-code relative z-10">
             <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 © {new Date().getFullYear()} R JERPHIN. ALL RIGHTS RESERVED.

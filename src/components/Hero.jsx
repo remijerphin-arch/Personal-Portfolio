@@ -113,7 +113,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex flex-col justify-center items-center px-6 pt-24 pb-12 overflow-hidden bg-[#0A0A0A] bg-cyber-grid bg-aurora-blue bg-aurora-purple"
+      className="min-h-screen relative flex flex-col justify-center items-center px-6 pt-24 pb-12 overflow-hidden bg-background bg-cyber-grid bg-aurora-blue bg-aurora-purple"
     >
       {/* Background radial gradient highlights */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-[120px] pointer-events-none -z-10" />

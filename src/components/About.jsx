@@ -19,7 +19,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 px-6 relative bg-[#0A0A0A]">
+    <section id="about" className="py-24 px-6 relative bg-background">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Title */}
         <div className="text-center space-y-4">

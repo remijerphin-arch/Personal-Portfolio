@@ -60,12 +60,16 @@ export default function AskJR() {
       
       const query = userText.toLowerCase();
 
-      // Simple keyword matching search
-      for (const item of KNOWLEDGE_BASE) {
-        const matches = item.keys.filter(key => query.includes(key));
-        if (matches.length > 0) {
-          botResponse = item.answer;
-          break;
+      if (query.includes('thank') || query.includes('thanks') || query.includes('ty')) {
+        botResponse = "You're very welcome! Have a nice day! 😊";
+      } else {
+        // Simple keyword matching search
+        for (const item of KNOWLEDGE_BASE) {
+          const matches = item.keys.filter(key => query.includes(key));
+          if (matches.length > 0) {
+            botResponse = item.answer;
+            break;
+          }
         }
       }
 
@@ -95,7 +99,7 @@ export default function AskJR() {
             initial={{ opacity: 0, scale: 0.8, y: 50 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 50 }}
-            className="absolute bottom-16 right-0 w-80 sm:w-96 h-[450px] rounded-2xl border border-white/10 shadow-2xl glass-card flex flex-col overflow-hidden"
+            className="absolute bottom-16 right-0 w-80 sm:w-96 h-[450px] rounded-2xl border border-white/10 shadow-2xl bg-[#0F0F11]/95 backdrop-blur-xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-[#121214] px-4 py-3 border-b border-white/5 flex justify-between items-center">
@@ -118,7 +122,7 @@ export default function AskJR() {
             </div>
 
             {/* Chat Messages Log */}
-            <div className="flex-grow p-4 overflow-y-auto space-y-4 text-xs">
+            <div className="flex-grow p-4 overflow-y-auto space-y-4 text-xs bg-black/45">
               {messages.map((msg, index) => (
                 <div
                   key={index}
@@ -131,10 +135,10 @@ export default function AskJR() {
                       </div>
                     )}
                     <div
-                      className={`p-3 rounded-2xl leading-relaxed whitespace-pre-wrap ${
+                      className={`p-3 rounded-2xl leading-relaxed whitespace-pre-wrap shadow-md ${
                         msg.sender === 'user'
-                          ? 'bg-gradient-to-r from-primary to-secondary text-black font-semibold rounded-tr-none'
-                          : 'bg-white/5 border border-white/5 text-gray-300 rounded-tl-none'
+                          ? 'bg-gradient-to-r from-primary to-secondary text-black font-bold rounded-tr-none'
+                          : 'bg-white/10 border border-white/5 text-gray-100 rounded-tl-none'
                       }`}
                     >
                       {msg.text}
@@ -149,7 +153,7 @@ export default function AskJR() {
                     <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Bot className="w-3.5 h-3.5 text-primary animate-bounce" />
                     </div>
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/5 text-gray-500 rounded-tl-none flex items-center space-x-1">
+                    <div className="p-3 rounded-2xl bg-white/10 border border-white/5 text-gray-400 rounded-tl-none flex items-center space-x-1">
                       <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                       <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
                       <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
@@ -161,7 +165,7 @@ export default function AskJR() {
             </div>
 
             {/* Input Bar */}
-            <form onSubmit={handleSend} className="p-3 bg-[#121214]/60 border-t border-white/5 flex space-x-2">
+            <form onSubmit={handleSend} className="p-3 bg-[#121214] border-t border-white/5 flex space-x-2">
               <input
                 type="text"
                 value={input}

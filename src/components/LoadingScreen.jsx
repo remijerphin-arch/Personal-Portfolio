@@ -57,7 +57,7 @@ export default function LoadingScreen({ onComplete }) {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: -100, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
-          className="fixed inset-0 bg-[#0A0A0A] z-[9999] flex flex-col justify-between p-6 sm:p-12 font-code"
+          className="fixed inset-0 bg-background z-[9999] flex flex-col justify-between p-6 sm:p-12 font-code"
         >
           {/* Header */}
           <div className="flex justify-between items-center text-xs text-primary opacity-60">

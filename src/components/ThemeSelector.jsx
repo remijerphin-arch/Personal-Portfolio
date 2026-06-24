@@ -3,16 +3,16 @@ import { Palette, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const THEMES = [
-  { name: 'Cyber Blue', primary: '#00D4FF', secondary: '#7B61FF' },
-  { name: 'Neon Mint', primary: '#00FF87', secondary: '#00A86B' },
-  { name: 'Sunset Flare', primary: '#FF5E36', secondary: '#FF007F' },
-  { name: 'Vaporwave', primary: '#FF71CE', secondary: '#01CDFE' },
-  { name: 'Solar Flare', primary: '#FFE600', secondary: '#FF5100' },
-  { name: 'Toxic Acid', primary: '#DFFF00', secondary: '#1E5631' },
-  { name: 'Crimson Venom', primary: '#FF0D50', secondary: '#990000' },
-  { name: 'Deep Ocean', primary: '#0052D4', secondary: '#4364F7' },
-  { name: 'Cyber Gold', primary: '#F5E050', secondary: '#FFBF00' },
-  { name: 'Plum Orchid', primary: '#FF007F', secondary: '#DA70D6' }
+  { name: 'Cyber Blue', primary: '#00D4FF', secondary: '#7B61FF', bg: '#05070F' },
+  { name: 'Neon Mint', primary: '#00FF87', secondary: '#00A86B', bg: '#040B07' },
+  { name: 'Sunset Flare', primary: '#FF5E36', secondary: '#FF007F', bg: '#0E0407' },
+  { name: 'Vaporwave', primary: '#FF71CE', secondary: '#01CDFE', bg: '#0B0414' },
+  { name: 'Solar Flare', primary: '#FFE600', secondary: '#FF5100', bg: '#0F0600' },
+  { name: 'Toxic Acid', primary: '#DFFF00', secondary: '#1E5631', bg: '#060B02' },
+  { name: 'Crimson Venom', primary: '#FF0D50', secondary: '#990000', bg: '#0F0003' },
+  { name: 'Deep Ocean', primary: '#0052D4', secondary: '#4364F7', bg: '#000A1A' },
+  { name: 'Cyber Gold', primary: '#F5E050', secondary: '#FFBF00', bg: '#0B0A03' },
+  { name: 'Plum Orchid', primary: '#FF007F', secondary: '#DA70D6', bg: '#0F020C' }
 ];
 
 export default function ThemeSelector() {
@@ -34,6 +34,7 @@ export default function ThemeSelector() {
     setActiveTheme(theme.name);
     document.documentElement.style.setProperty('--color-primary', theme.primary);
     document.documentElement.style.setProperty('--color-secondary', theme.secondary);
+    document.documentElement.style.setProperty('--color-bg', theme.bg || '#05070F');
     localStorage.setItem('jerphin_theme', theme.name);
   };
 
