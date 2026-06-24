@@ -20,8 +20,8 @@ const KNOWLEDGE_BASE = [
     answer: 'Jerphin holds several certified credentials:\n- "Advanced JavaScript Frameworks (Angular)" - L&T EduTech (First Class)\n- "UI/UX Developer" - L&T EduTech (First Class)\n- "Python Programming" & "AI Principles" - Udemy\n- "Network Fundamentals" - Infosys\n- "HackerRank Certifications" in Python, Java, and SQL (Basic & Intermediate).\n\nThese are useful because they officially validate his software developer credentials and verify his knowledge of enterprise frameworks, clean coding, and network architectures.'
   },
   {
-    keys: ['education', 'university', 'christ', 'college', 'school', 'joseph', 'cgpa', 'grade', 'gpa', 'sem', 'current'],
-    answer: 'Jerphin is currently pursuing his B.Tech in Computer Science (AI & ML) at Christ University, Bangalore (2024–2028), and is currently in his 5th Semester (as of June 2026) with a CGPA of 3.3/4.0. He has a minor in General Management and has no backlogs. He completed his schooling at St. Joseph\'s School, Tamil Nadu. This education is useful because it merges deep AI/ML programming with general business management fundamentals.'
+    keys: ['education', 'university', 'christ', 'college', 'school', 'joseph', 'cgpa', 'grade', 'gpa', 'sem', 'current', 'embedded', 'edge', 'mahindra'],
+    answer: 'Jerphin is currently pursuing his B.Tech in Computer Science (AI & ML) at Christ University, Bangalore (2024–2028), and is currently in his 5th Semester (as of June 2026) with a CGPA of 3.3/4.0. He is currently pursuing electives in "Introduction to Embedded Systems and Edge AI" offered by Tech Mahindra. This education is highly useful because it merges deep AI/ML and Edge computing hardware with business management fundamentals, equipping him to deploy neural models directly onto resource-constrained physical Edge devices.'
   },
   {
     keys: ['contact', 'email', 'phone', 'call', 'mail', 'linkedin', 'github', 'reach', 'hire', 'locate', 'location'],

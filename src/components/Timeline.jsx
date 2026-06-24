@@ -8,7 +8,7 @@ export default function Timeline() {
       year: '2026 (Sem-5)',
       title: 'Currently Pursuing 5th Semester',
       location: 'Christ University, Bangalore',
-      desc: 'Enrolled in B.Tech CS (AI & ML). Actively studying advanced neural network models and elective general management fields.',
+      desc: 'Enrolled in B.Tech CS (AI & ML). Pursuing electives in "Introduction to Embedded Systems and Edge AI" offered by Tech Mahindra, and elective General Management fields.',
       icon: <School className="w-5 h-5 text-primary animate-pulse" />,
       type: 'edu',
       highlight: true

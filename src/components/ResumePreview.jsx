@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { Download, FileJson, Award, GraduationCap, Copy, Check } from 'lucide-react';
+import { Download, FileJson, Award, GraduationCap, Copy, Check, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ResumePreview() {
   const [activeTab, setActiveTab] = useState('json');
   const [copied, setCopied] = useState(false);
+  const [selectedPdf, setSelectedPdf] = useState(null);
 
   const resumeJson = `{
   "candidate": {
     "name": "R JERPHIN",
-    "specialization": "AI & Machine Learning",
+    "specialization": "AI & Machine Learning Engineering",
     "contact": {
       "email": "r.jerphin@gmail.com",
       "phone": "+91 7305695031",
@@ -16,35 +18,96 @@ export default function ResumePreview() {
       "linkedin": "https://www.linkedin.com/in/r-jerphin-a8a7b5315"
     }
   },
-  "internship": {
-    "organization": "ISRO Propulsion Complex (IPRC)",
-    "duration": "10 Days",
-    "focus": "Propulsion telemetry systems & telemetry data logging structural testing"
-  },
   "education": [
     {
-      "degree": "B.Tech in Computer Science (AI & ML)",
-      "institution": "Christ University, Bangalore",
+      "degree": "Bachelor of Technology - Computer Science (AI & ML)",
+      "institution": "Christ University, Kengeri Campus, Bangalore",
       "period": "2024 - 2028 (Pursuing)",
       "metrics": {
         "cgpa": "3.3 / 4.0 (till 3rd semester)",
-        "minor": "General Management"
+        "minor": "General Management",
+        "backlogs": "None"
       }
+    },
+    {
+      "degree": "Class 12 - CBSE (Maths, Computer Science)",
+      "institution": "St. Joseph's School, Manavalakurichy, Tamil Nadu",
+      "period": "2024"
+    },
+    {
+      "degree": "Class 10 - CBSE",
+      "institution": "St. Joseph's School, Manavalakurichy, Tamil Nadu",
+      "period": "2022"
     }
   ],
-  "languages": ["Python", "SQL", "Java (Basic)", "C (Basic)"],
-  "concepts": ["Data Structures", "OOP", "DBMS Basics", "Web Development"]
+  "internship": {
+    "organization": "ISRO Propulsion Complex (IPRC) Mahendragiri",
+    "focus": "Propulsion telemetry systems & telemetry data logging structural testing"
+  },
+  "academic_projects": [
+    {
+      "title": "Solar Tracking System",
+      "semester": "Sem-1",
+      "description": "Built a solar tracker using LDR sensors to detect sunlight direction and automatically rotate the panel for maximum efficiency."
+    },
+    {
+      "title": "Footstep Power Generation System",
+      "semester": "Sem-2",
+      "description": "Developed a prototype using piezoelectric sensors to generate electrical energy from human footsteps."
+    },
+    {
+      "title": "SmartBusGo - Startup Idea",
+      "semester": "Sem-3",
+      "description": "Proposed a smart bus tracking and digital ticketing solution."
+    },
+    {
+      "title": "Stop-and-Wait Protocol Simulator",
+      "semester": "Sem-4",
+      "description": "Simulated the Stop-and-Wait ARQ protocol to demonstrate reliable data transmission with acknowledgments, timeout and retransmission."
+    },
+    {
+      "title": "CPU Scheduling Visualizer (OS)",
+      "semester": "Sem-4",
+      "description": "Developing an interface to visualize CPU scheduling algorithms with Gantt chart, waiting time and turnaround time calculation."
+    },
+    {
+      "title": "Hotel Booking & Room Management System",
+      "semester": "Sem-4",
+      "description": "Built a web-based hotel booking system using Angular with room browsing, booking interface and admin dashboard."
+    }
+  ],
+  "technical_skills": {
+    "programming": ["Python", "Java (Basic)", "C (Basic)", "SQL"],
+    "core_concepts": ["Data Structures (Basic)", "OOP", "DBMS Basics"],
+    "web_basics": ["HTML", "CSS", "JavaScript (Basic)"],
+    "tools": ["Git & GitHub", "Canva", "Linux (Basic)"],
+    "other": ["Basic knowledge of sensors, mini-projects and hardware integration"]
+  },
+  "certifications": [
+    "Python Programming - Udemy",
+    "AI Principles - Udemy",
+    "Network Fundamentals - Infosys",
+    "Java Basic - HackerRank",
+    "Python Basic - HackerRank",
+    "SQL Basic - HackerRank",
+    "SQL Intermediate - HackerRank",
+    "UI/UX Developer - L&T EduTech (First Class)",
+    "Advanced JavaScript Frameworks (Angular) - L&T EduTech (First Class)"
+  ],
+  "soft_skills": ["Communication", "Presentation", "Time Management", "Problem Solving", "Quick Learner", "Adaptability"],
+  "interests": ["Artificial Intelligence & Machine Learning", "Software Development", "IoT Mini-Projects", "Startup/Product Ideas"]
 }`;
 
   const certs = [
-    { name: 'Advanced JavaScript Frameworks (Angular)', issuer: 'L&T EduTech', status: 'First Class' },
-    { name: 'UI/UX Developer', issuer: 'L&T EduTech', status: 'First Class' },
-    { name: 'Python Programming', issuer: 'Udemy', status: 'Verified' },
-    { name: 'AI Principles', issuer: 'Udemy', status: 'Verified' },
-    { name: 'Network Fundamentals', issuer: 'Infosys', status: 'Verified' },
-    { name: 'Java Basic', issuer: 'HackerRank', status: 'Passed' },
-    { name: 'Python Basic', issuer: 'HackerRank', status: 'Passed' },
-    { name: 'SQL Basic & Intermediate', issuer: 'HackerRank', status: 'Passed' }
+    { name: 'Advanced JavaScript Frameworks (Angular)', issuer: 'L&T EduTech', status: 'First Class', pdf: null },
+    { name: 'UI/UX Developer', issuer: 'L&T EduTech', status: 'First Class', pdf: null },
+    { name: 'Python Programming', issuer: 'Udemy', status: 'Verified', pdf: 'certs/python_udemy.pdf' },
+    { name: 'AI Principles', issuer: 'Udemy', status: 'Verified', pdf: 'certs/ai_principles.pdf' },
+    { name: 'Network Fundamentals', issuer: 'Infosys', status: 'Verified', pdf: 'certs/network_infosys.pdf' },
+    { name: 'Java Basic', issuer: 'HackerRank', status: 'Passed', pdf: 'certs/java_basic.pdf' },
+    { name: 'Python Basic', issuer: 'HackerRank', status: 'Passed', pdf: 'certs/python_basic.pdf' },
+    { name: 'SQL Basic', issuer: 'HackerRank', status: 'Passed', pdf: null },
+    { name: 'SQL Intermediate', issuer: 'HackerRank', status: 'Passed', pdf: null }
   ];
 
   const handleCopy = () => {
@@ -145,7 +208,7 @@ export default function ResumePreview() {
               <div className="flex w-full">
                 {/* Line Numbers */}
                 <div className="text-gray-700 text-right pr-4 select-none border-r border-white/5 mr-4 hidden sm:block">
-                  {Array.from({ length: 25 }).map((_, i) => (
+                  {Array.from({ length: resumeJson.split('\n').length }).map((_, i) => (
                     <div key={i}>{i + 1}</div>
                   ))}
                 </div>
@@ -176,12 +239,22 @@ export default function ResumePreview() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {certs.map((c, i) => (
-                    <div key={i} className="p-4 rounded-xl border border-white/5 bg-white/[0.02] flex items-center space-x-3">
-                      <Award className="w-8 h-8 text-secondary flex-shrink-0" />
-                      <div>
-                        <div className="font-semibold text-white text-xs">{c.name}</div>
-                        <div className="text-[10px] text-gray-500 mt-0.5">{c.issuer} • {c.status}</div>
+                    <div key={i} className="p-4 rounded-xl border border-white/5 bg-white/[0.02] flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <Award className="w-8 h-8 text-secondary flex-shrink-0" />
+                        <div>
+                          <div className="font-semibold text-white text-xs">{c.name}</div>
+                          <div className="text-[10px] text-gray-500 mt-0.5">{c.issuer} • {c.status}</div>
+                        </div>
                       </div>
+                      {c.pdf && (
+                        <button
+                          onClick={() => setSelectedPdf(c.pdf)}
+                          className="px-3 py-1.5 rounded-lg bg-secondary/10 hover:bg-secondary/20 text-secondary border border-secondary/20 hover:border-secondary/40 text-[10px] font-semibold transition-all cursor-pointer"
+                        >
+                          View
+                        </button>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -201,6 +274,51 @@ export default function ResumePreview() {
           </a>
         </div>
       </div>
+
+      {/* Certificate Viewer Modal */}
+      <AnimatePresence>
+        {selectedPdf && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] bg-black/85 backdrop-blur-md flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              className="relative w-full max-w-4xl h-[85vh] bg-[#121214] border border-white/10 rounded-2xl overflow-hidden flex flex-col"
+            >
+              {/* Modal Header */}
+              <div className="p-4 bg-[#171719] border-b border-white/5 flex justify-between items-center">
+                <span className="text-xs font-bold text-white uppercase tracking-wider font-code">System Verification Node // Viewer Only</span>
+                <button
+                  onClick={() => setSelectedPdf(null)}
+                  className="p-1.5 rounded-full hover:bg-white/5 text-gray-400 hover:text-white transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* PDF Container with transparent click-blocker layer */}
+              <div className="flex-grow relative bg-[#0D0D0F] select-none">
+                <iframe
+                  src={`${selectedPdf}#toolbar=0&navpanes=0`}
+                  title="Certificate Preview"
+                  className="w-full h-full border-none pointer-events-auto"
+                />
+                {/* Transparent Shield overlay to prevent drag, print triggers or saving */}
+                <div
+                  className="absolute inset-0 bg-transparent cursor-default"
+                  onContextMenu={(e) => e.preventDefault()}
+                  style={{ pointerEvents: 'auto' }}
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

@@ -79,6 +79,7 @@ export default function About() {
                 <p className="font-semibold text-white">B.Tech in Computer Science (AI &amp; ML)</p>
                 <p className="text-gray-400 text-xs">Christ University, Bangalore • 2024 - 2028</p>
                 <p className="text-primary text-xs mt-1 font-semibold">CGPA: 3.3 / 4.0 (till 3rd sem) • Minors: General Management</p>
+                <p className="text-gray-400 text-[10px] mt-1 italic">Elective: "Introduction to Embedded Systems and Edge AI" (by Tech Mahindra)</p>
               </div>
               <hr className="border-white/5" />
               <div>
