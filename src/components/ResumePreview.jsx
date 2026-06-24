@@ -9,7 +9,6 @@ export default function ResumePreview() {
   "candidate": {
     "name": "R JERPHIN",
     "specialization": "AI & Machine Learning",
-    "timeline_scope": "Updated till June 2026",
     "contact": {
       "email": "r.jerphin@gmail.com",
       "phone": "+91 7305695031",
@@ -74,7 +73,7 @@ export default function ResumePreview() {
             INTERACTIVE <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">RESUME</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
-            Explore my profile variables directly through the cybernetic IDE or download a raw JSON file.
+            Explore my profile variables directly through the cybernetic IDE or download a raw JSON file (Updated till June 2026).
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
         </div>
