@@ -5,6 +5,15 @@ import { Rocket, School, BookOpen, Star } from 'lucide-react';
 export default function Timeline() {
   const timelineData = [
     {
+      year: '2026 (Interim)',
+      title: 'ISRO (IPRC) Internship',
+      location: 'Mahendragiri, TN',
+      desc: '10-day internship analyzing telemetry channels, observing test stand telemetry databases, and rocket propulsion instrumentation structures.',
+      icon: <Rocket className="w-5 h-5 text-secondary" />,
+      type: 'intern',
+      highlight: true
+    },
+    {
       year: '2025 (Sem-4)',
       title: 'Advanced Networking & Operating Systems',
       location: 'Christ University, Bangalore',
@@ -13,21 +22,12 @@ export default function Timeline() {
       type: 'edu'
     },
     {
-      year: '2024 (Sem-3)',
+      year: '2025 (Sem-3)',
       title: 'Management Minor & SmartBusGo',
       location: 'Christ University, Bangalore',
       desc: 'Acquired core competencies in General Management. Authored the SmartBusGo concept proposing real-time ticketing solutions.',
       icon: <Star className="w-5 h-5 text-secondary" />,
       type: 'project'
-    },
-    {
-      year: '2024 (Interim)',
-      title: 'ISRO (IPRC) Internship',
-      location: 'Mahendragiri, TN',
-      desc: '10-day internship analyzing telemetry channels, observing test stand telemetry databases, and rocket propulsion instrumentation structures.',
-      icon: <Rocket className="w-5 h-5 text-secondary" />,
-      type: 'intern',
-      highlight: true
     },
     {
       year: '2024 (Sem-1 & 2)',
