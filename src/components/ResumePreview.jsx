@@ -130,13 +130,14 @@ export default function ResumePreview() {
               >
                 {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
               </button>
-              <button
-                onClick={handleDownloadText}
-                className="p-2 rounded bg-white/5 border border-white/5 hover:border-secondary/50 text-gray-400 hover:text-secondary transition-all"
-                title="Download JSON Resume"
+              <a
+                href="R_Jerphin_Resume.pdf"
+                download="R_Jerphin_Resume.pdf"
+                className="p-2 rounded bg-white/5 border border-white/5 hover:border-secondary/50 text-gray-400 hover:text-secondary transition-all flex items-center justify-center"
+                title="Download PDF Resume"
               >
                 <Download className="w-4 h-4" />
-              </button>
+              </a>
             </div>
 
             {/* Editor Area */}
@@ -191,12 +192,13 @@ export default function ResumePreview() {
 
         {/* Action Centered Row */}
         <div className="text-center">
-          <button
-            onClick={handleDownloadText}
-            className="px-8 py-3.5 bg-gradient-to-r from-primary to-secondary text-black rounded-full font-bold text-xs shadow-glow-blue uppercase tracking-wider hover:scale-105 transition-transform"
+          <a
+            href="R_Jerphin_Resume.pdf"
+            download="R_Jerphin_Resume.pdf"
+            className="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-secondary text-black rounded-full font-bold text-xs shadow-glow-blue uppercase tracking-wider hover:scale-105 transition-transform"
           >
-            Direct JSON Download
-          </button>
+            Download PDF Resume
+          </a>
         </div>
       </div>
     </section>

@@ -160,7 +160,8 @@ export default function Hero() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#resume"
+              href="R_Jerphin_Resume.pdf"
+              download="R_Jerphin_Resume.pdf"
               className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/10 hover:border-primary/50 text-sm font-semibold text-gray-300 hover:text-white glass-card flex items-center justify-center space-x-2 hover:scale-105 transition-all duration-300"
             >
               <Download className="w-4 h-4" />
