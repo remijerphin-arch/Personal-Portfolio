@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import MouseFollower from './components/MouseFollower';
 import ParticlesBg from './components/ParticlesBg';
 import ThemeSelector from './components/ThemeSelector';
+import AskJR from './components/AskJR';
 import { ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -77,6 +78,9 @@ export default function App() {
 
           {/* Theme accents matrix switcher */}
           <ThemeSelector />
+
+          {/* Floating AI chat assistant */}
+          <AskJR />
 
           {/* Scroll to Top capsule */}
           <AnimatePresence>

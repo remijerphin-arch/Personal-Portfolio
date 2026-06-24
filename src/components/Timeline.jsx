@@ -5,6 +5,15 @@ import { Rocket, School, BookOpen, Star } from 'lucide-react';
 export default function Timeline() {
   const timelineData = [
     {
+      year: '2026 (Sem-5)',
+      title: 'Currently Pursuing 5th Semester',
+      location: 'Christ University, Bangalore',
+      desc: 'Enrolled in B.Tech CS (AI & ML). Actively studying advanced neural network models and elective general management fields.',
+      icon: <School className="w-5 h-5 text-primary animate-pulse" />,
+      type: 'edu',
+      highlight: true
+    },
+    {
       year: '2026 (Interim)',
       title: 'ISRO (IPRC) Internship',
       location: 'Mahendragiri, TN',
