@@ -9,6 +9,7 @@ export default function ResumePreview() {
   "candidate": {
     "name": "R JERPHIN",
     "specialization": "AI & Machine Learning",
+    "timeline_scope": "Updated till June 2026",
     "contact": {
       "email": "r.jerphin@gmail.com",
       "phone": "+91 7305695031",
@@ -27,7 +28,7 @@ export default function ResumePreview() {
       "institution": "Christ University, Bangalore",
       "period": "2024 - 2028 (Pursuing)",
       "metrics": {
-        "cgpa": "3.3 / 4.0",
+        "cgpa": "3.3 / 4.0 (till 3rd semester)",
         "minor": "General Management"
       }
     }
@@ -37,10 +38,11 @@ export default function ResumePreview() {
 }`;
 
   const certs = [
+    { name: 'Advanced JavaScript Frameworks (Angular)', issuer: 'L&T EduTech', status: 'First Class' },
+    { name: 'UI/UX Developer', issuer: 'L&T EduTech', status: 'First Class' },
     { name: 'Python Programming', issuer: 'Udemy', status: 'Verified' },
     { name: 'AI Principles', issuer: 'Udemy', status: 'Verified' },
     { name: 'Network Fundamentals', issuer: 'Infosys', status: 'Verified' },
-    { name: 'UI/UX Developer', issuer: 'L&T EduTech', status: 'First Class' },
     { name: 'Java Basic', issuer: 'HackerRank', status: 'Passed' },
     { name: 'Python Basic', issuer: 'HackerRank', status: 'Passed' },
     { name: 'SQL Basic & Intermediate', issuer: 'HackerRank', status: 'Passed' }
