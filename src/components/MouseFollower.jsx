@@ -51,7 +51,7 @@ export default function MouseFollower() {
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          boxShadow: '0 0 15px #00D4FF, 0 0 30px #00D4FF',
+          boxShadow: '0 0 15px var(--color-primary), 0 0 30px var(--color-primary)',
         }}
       />
       {/* Outer Floating Aura */}
@@ -60,7 +60,7 @@ export default function MouseFollower() {
         style={{
           left: `${trail.x}px`,
           top: `${trail.y}px`,
-          background: 'radial-gradient(circle, rgba(0,212,255,0.15) 0%, rgba(123,97,255,0.05) 50%, transparent 100%)',
+          background: 'radial-gradient(circle, var(--color-primary) 0%, var(--color-secondary) 50%, transparent 100%)',
           mixBlendMode: 'screen',
         }}
       />

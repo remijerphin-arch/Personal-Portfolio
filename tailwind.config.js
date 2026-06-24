@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         background: '#0A0A0A',
-        primary: '#00D4FF', // Electric blue
-        secondary: '#7B61FF', // Purple
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
         darkCard: '#121214',
       },
       fontFamily: {

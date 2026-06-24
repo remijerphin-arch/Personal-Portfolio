@@ -11,6 +11,7 @@ import ResumePreview from './components/ResumePreview';
 import Contact from './components/Contact';
 import MouseFollower from './components/MouseFollower';
 import ParticlesBg from './components/ParticlesBg';
+import ThemeSelector from './components/ThemeSelector';
 import { ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -73,6 +74,9 @@ export default function App() {
               </div>
             </div>
           </footer>
+
+          {/* Theme accents matrix switcher */}
+          <ThemeSelector />
 
           {/* Scroll to Top capsule */}
           <AnimatePresence>
