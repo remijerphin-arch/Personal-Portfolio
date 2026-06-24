@@ -77,10 +77,37 @@ export default function Hero() {
     }
   };
 
+  const handleSlotClick = () => {
+    const isAuth = sessionStorage.getItem('sys_authenticated') === 'true';
+    if (isAuth) {
+      fileInputRef.current?.click();
+    } else {
+      const pw = prompt('Enter System Administrator password to upload photo:');
+      if (pw === 'jerphin@66') {
+        sessionStorage.setItem('sys_authenticated', 'true');
+        fileInputRef.current?.click();
+      } else if (pw !== null) {
+        alert('Access Denied. Invalid Authorization Key.');
+      }
+    }
+  };
+
   const clearPic = (e) => {
     e.stopPropagation();
-    setProfilePic(null);
-    localStorage.removeItem('jerphin_profile_pic');
+    const isAuth = sessionStorage.getItem('sys_authenticated') === 'true';
+    if (isAuth) {
+      setProfilePic(null);
+      localStorage.removeItem('jerphin_profile_pic');
+    } else {
+      const pw = prompt('Enter System Administrator password to clear photo:');
+      if (pw === 'jerphin@66') {
+        sessionStorage.setItem('sys_authenticated', 'true');
+        setProfilePic(null);
+        localStorage.removeItem('jerphin_profile_pic');
+      } else if (pw !== null) {
+        alert('Access Denied. Invalid Authorization Key.');
+      }
+    }
   };
 
   return (
@@ -106,7 +133,7 @@ export default function Hero() {
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight font-outfit text-white leading-none">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-outfit text-white leading-none">
             R JERPHIN
           </h1>
 
@@ -165,7 +192,7 @@ export default function Hero() {
 
             {/* Inner Content Slot */}
             <div
-              onClick={() => fileInputRef.current?.click()}
+              onClick={handleSlotClick}
               className="w-full h-full rounded-[20px] bg-[#121214] flex flex-col items-center justify-center relative cursor-pointer overflow-hidden border border-white/5 transition-all duration-300 group-hover:bg-[#121214]/80"
             >
               {profilePic ? (
