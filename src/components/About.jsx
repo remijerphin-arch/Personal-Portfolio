@@ -47,7 +47,7 @@ export default function About() {
               <h3 className="text-lg font-bold font-outfit uppercase tracking-wide">The Technical Journey</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-              My engineering adventure started with physical hardware integration, building automatic solar trackers, and harvesting piezoelectric energy from footsteps. This hands-on background cultivated my deep fascination with how raw sensor data feeds back into intelligent decision-making, naturally driving me toward **Artificial Intelligence and Machine Learning**.
+              My engineering adventure started with physical hardware integration, building automatic solar trackers, and harvesting piezoelectric energy from footsteps. This hands-on background cultivated my deep fascination with how raw sensor data feeds back into intelligent decision-making, naturally driving me toward "Artificial Intelligence and Machine Learning".
             </p>
             <div className="pt-2 text-xs text-gray-500 font-code">&gt; focus: computer_vision &amp; signal_processing</div>
           </motion.div>
@@ -63,7 +63,7 @@ export default function About() {
               <h3 className="text-lg font-bold font-outfit uppercase tracking-wide">ISRO (IPRC) Internship</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-              Completed a prestigious 10-day internship at the **ISRO Propulsion Complex (IPRC)**. Immersed in rocket propulsion testing systems, I analyzed high-velocity data telemetry channels and observed mission-critical hardware architectures. This experience instilled in me a rigorous standard for building highly fault-tolerant, low-latency software pipelines.
+              Completed a prestigious 10-day internship at the "ISRO Propulsion Complex (IPRC)". Immersed in rocket propulsion testing systems, I analyzed high-velocity data telemetry channels and observed mission-critical hardware architectures. This experience instilled in me a rigorous standard for building highly fault-tolerant, low-latency software pipelines.
             </p>
             <div className="pt-2 text-xs text-secondary font-code">&gt; location: Mahendragiri, Tamil Nadu</div>
           </motion.div>

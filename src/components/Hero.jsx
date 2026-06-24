@@ -120,7 +120,7 @@ export default function Hero() {
 
           {/* Introduction */}
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-            B.Tech Computer Science student specializing in **AI &amp; Machine Learning** at Christ University, Bangalore. Gained hands-on engineering insights during an internship at the **ISRO Propulsion Complex (IPRC)**, and design experiences across physical IoT and full-stack solutions.
+            B.Tech Computer Science student specializing in "AI &amp; Machine Learning" at Christ University, Bangalore. Gained hands-on engineering insights during an internship at the "ISRO Propulsion Complex (IPRC)", and design experiences across physical IoT and full-stack solutions.
           </p>
 
           {/* CTA Buttons */}
